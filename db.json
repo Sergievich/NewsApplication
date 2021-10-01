@@ -1,0 +1,137 @@
+{
+  "posts": [
+    {
+      "groupId": 1,
+      "id": 2,
+      "text": "Вышел новый Ford Mustang GT 2021, V8, 5.0, скоро выйдет обзор в этой группе!!!!",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fautoreview.ru%2Fnews%2Fobnovlennyy-ford-mustang-shelby-gt350-bystree-no-ne-moschnee&psig=AOvVaw2T-DvGibOxVxTgCwITR4jQ&ust=1632330438804000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjrwPLGkPMCFQAAAAAdAAAAABAD",
+      "likes": 1
+    },
+    {
+      "groupId": 1,
+      "id": 2,
+      "text": "Скоро готовится анонс нового BMW, если интересен обзор, то ставит лайки!",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fxn--80aed5aobb1a.xn--p1ai%2Fcar-logos%2Fbmw-logo.html&psig=AOvVaw1djQtzurwf2-K8TEzt1SKD&ust=1632330531386000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJCTjZ_HkPMCFQAAAAAdAAAAABAD",
+      "likes": 1
+    },
+    {
+      "groupId": 2,
+      "id": 1,
+      "text": "На нашем любимом сайте Али экспресс новые смартфоны компании Mi Poco Flex Pro 19 21 mini",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarket.yandex.ru%2Fproduct--smartfon-blackview-bv5500-plus%2F665225003&psig=AOvVaw2ERunhio5Uf6rM3kFUAC23&ust=1632331281380000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCND5jITKkPMCFQAAAAAdAAAAABAD",
+      "likes": 1
+    },
+    {
+      "groupId": 2,
+      "id": 2,
+      "text": "Набор приколов",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbugaga.ru%2Fjokes%2F1146774907-foto-prikoly.html&psig=AOvVaw2L4jOwtFypD12J0HkB-KYR&ust=1632331336422000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDC3Z7KkPMCFQAAAAAdAAAAABAV",
+      "likes": 1
+    },
+    {
+      "groupId": 3,
+      "id": 1,
+      "text": "Нефть падает, срочно продаем!",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gazeta.ru%2Fbusiness%2F2016%2F03%2F01%2F8102321.shtml&psig=AOvVaw2IbY2-BPU_hhrXJgEqhTZT&ust=1632331452079000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJD8pNbKkPMCFQAAAAAdAAAAABAD",
+      "likes": 1
+    },
+    {
+      "groupId": 4,
+      "id": 1,
+      "text": "Прошли очередные выборы в российскую думу",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fauto.onliner.by%2F2020%2F06%2F17%2Fistoriya-belorusskogo-avtozaka&psig=AOvVaw2GSEN6WXv_877x-d4aEdPl&ust=1632331515500000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNi7q_TKkPMCFQAAAAAdAAAAABAJ",
+      "likes": 1
+    },
+    {
+      "groupId": 4,
+      "id": 2,
+      "text": "Трагедия одна за одной, прошла стрельба в Российском вузе, есть пострадавшие",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdic.academic.ru%2Fdic.nsf%2Fruwiki%2F828667&psig=AOvVaw3BDIz5usAiUaCTTirEcAxw&ust=1632331592132000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjkipjLkPMCFQAAAAAdAAAAABAD",
+      "likes": 1
+    },
+    {
+      "groupId": 3,
+      "id": 2,
+      "text": "Поздравлеям вас с днем трейдера, приятного трейдинга, ожмдается рост $$$",
+      "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn22.img.ria.ru%2Fimages%2F155926%2F68%2F1559266810_0%3A0%3A3077%3A1731_1920x0_80_0_0_a18a3c1a9f0b823a1affbbc00e6e77e6.jpg&imgrefurl=https%3A%2F%2Fria.ru%2F20210105%2Fdollar-1592035331.html&tbnid=P6449IlfWI3XiM&vet=12ahUKEwjjztewy5DzAhUT8xoKHQTYBBoQMygAegUIARDJAQ..i&docid=fXEgsBW_LTdkSM&w=1920&h=1080&q=доллар&client=safari&ved=2ahUKEwjjztewy5DzAhUT8xoKHQTYBBoQMygAegUIARDJAQ",
+      "likes": 1
+    }
+  ],
+  "groups": [
+      {
+        "id": 0,
+        "name": "Самая лучшая группа",
+        "groupImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Ftutby.gcdn.co%2Fn%2F01%2Fa%2F1400kh1400.png&imgrefurl=https%3A%2F%2Fnews.tut.by%2Fsociety%2F552226.html&tbnid=ju8YwJpCk3ueFM&vet=12ahUKEwiZy_b9y5DzAhUaShoKHeLVBQwQMygHegUIARC4AQ..i&docid=MWIUnyX5fB59GM&w=1400&h=1400&q=tut%20by%20logo&client=safari&ved=2ahUKEwiZy_b9y5DzAhUaShoKHeLVBQwQMygHegUIARC4AQ",
+        "tag": "Новости",
+        "posts": []
+      },
+    {
+      "id": 4,
+      "name": "tut.by",
+      "groupImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Ftutby.gcdn.co%2Fn%2F01%2Fa%2F1400kh1400.png&imgrefurl=https%3A%2F%2Fnews.tut.by%2Fsociety%2F552226.html&tbnid=ju8YwJpCk3ueFM&vet=12ahUKEwiZy_b9y5DzAhUaShoKHeLVBQwQMygHegUIARC4AQ..i&docid=MWIUnyX5fB59GM&w=1400&h=1400&q=tut%20by%20logo&client=safari&ved=2ahUKEwiZy_b9y5DzAhUaShoKHeLVBQwQMygHegUIARC4AQ",
+      "tag": "Новости",
+      "posts": [1, 2]
+    },
+    {
+      "id": 1,
+      "name": "Motors.BY",
+      "groupImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fst4.zr.ru%2F_ah%2Fimg%2F2rpjDfBIRjkODEbqjXK4MA%3Ds800&imgrefurl=https%3A%2F%2Fwww.zr.ru%2Fcontent%2Farticles%2F309858-znamenityje_dvigateli_10_stupenej_k_sovershenstvu%2F&tbnid=V8wqii5hKVR7cM&vet=12ahUKEwjaqJeczJDzAhUINBoKHZHGDl4QMygFegUIARDfAQ..i&docid=LnZSF_tKuA4-JM&w=800&h=535&q=motor&client=safari&ved=2ahUKEwjaqJeczJDzAhUINBoKHZHGDl4QMygFegUIARDfAQ",
+      "tag": "Машины",
+      "posts": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "Любители странной техники",
+      "groupImage": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F29%2FXiaomi_logo.svg%2F2048px-Xiaomi_logo.svg.png&imgrefurl=https%3A%2F%2Fru.m.wikinews.org%2Fwiki%2F%25D0%25A4%25D0%25B0%25D0%25B9%25D0%25BB%3AXiaomi_logo.svg&tbnid=shqvJ6S5ccnJTM&vet=12ahUKEwiLubSQzJDzAhVFXxoKHQRNAOEQMygAegUIARC4AQ..i&docid=E2BG1hvZAjBNXM&w=2048&h=2048&q=mi%20logo&client=safari&ved=2ahUKEwiLubSQzJDzAhVFXxoKHQRNAOEQMygAegUIARC4AQ",
+      "tag": "Техника",
+      "posts": [1, 2]
+    },
+    {
+      "id": 3,
+      "name": "Топ трейдер Костян",
+      "groupImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fberg.com.ua%2Fbasic%2Ftrader%2F&psig=AOvVaw0y8ie5dw3H0Jt9YIXNHNP4&ust=1632331948458000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjs3sHMkPMCFQAAAAAdAAAAABAJ",
+      "tag": "Рынки",
+      
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "prikol312@gmail.com",
+      "name": "Vasyan",
+      "password": "Bulka123",
+      "groupsId": [2, 3]
+      },
+    {
+      "id": 2,
+      "email": "prikol3132@gmail.com",
+      "name": "Kostyan",
+      "password": "Bulka133",
+      "groupsId": [3]
+      
+    },
+    {
+      "id": 3,
+      "email": "prikol3112@gmail.com",
+      "name": "Artymyan",
+      "password": "Bulka223",
+      "groupsId": [1, 2]
+      
+    },
+    {
+      "id": 4,
+      "email": "prikol3122@gmail.com",
+      "name": "Slavyan",
+      "password": "Sizoshka321",
+      "groupsId": [1, 2, 3]
+      
+    },
+    {
+      "name": "Pochka",
+      "email": "prikols@gmail.com",
+      "password": "Ar20122001",
+      "id": 5,
+      "groupsId": [0]
+    }
+  ]
+}

@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92671D7026FB38EC0015EC5B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 92671D6F26FB38EC0015EC5B /* SwiftyJSON */; };
+		92671D7326FC85530015EC5B /* ValidateServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92671D7226FC85520015EC5B /* ValidateServices.swift */; };
+		92671D75270336590015EC5B /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92671D74270336590015EC5B /* RegistrationVC.swift */; };
+		92671D7727063B850015EC5B /* FeedTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92671D7627063B850015EC5B /* FeedTableVC.swift */; };
 		92C752A526E77D5B00D6885A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752A426E77D5B00D6885A /* AppDelegate.swift */; };
 		92C752A726E77D5B00D6885A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752A626E77D5B00D6885A /* SceneDelegate.swift */; };
 		92C752AC26E77D5B00D6885A /* SignInOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C752AA26E77D5B00D6885A /* SignInOut.storyboard */; };
@@ -15,9 +19,13 @@
 		92C752BC26E77D6100D6885A /* MyNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752BB26E77D6100D6885A /* MyNewsAppTests.swift */; };
 		92C752C726E77D6100D6885A /* MyNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752C626E77D6100D6885A /* MyNewsAppUITests.swift */; };
 		92C752DA26E78B2900D6885A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752D926E78B2900D6885A /* SignInVC.swift */; };
-		92C752DC26E9208A00D6885A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C752DB26E9208A00D6885A /* SignUp.storyboard */; };
-		92C752DE26E921E900D6885A /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752DD26E921E900D6885A /* SignUpVC.swift */; };
 		92C752E226EA113F00D6885A /* VerficationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752E126EA113F00D6885A /* VerficationService.swift */; };
+		92C752E626EF861400D6885A /* FeedTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752E426EF861400D6885A /* FeedTVCell.swift */; };
+		92C752E726EF861400D6885A /* FeedTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C752E526EF861400D6885A /* FeedTVCell.xib */; };
+		92C752EF26F0C9D200D6885A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752EE26F0C9D200D6885A /* UserModel.swift */; };
+		92C752F126F0C9EC00D6885A /* GroupAnsPostsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752F026F0C9EC00D6885A /* GroupAnsPostsModels.swift */; };
+		92C752F626F0EF8E00D6885A /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752F526F0EF8E00D6885A /* ApiConstans.swift */; };
+		92C752F826F1F74600D6885A /* FeedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752F726F1F74600D6885A /* FeedTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92671D7226FC85520015EC5B /* ValidateServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateServices.swift; sourceTree = "<group>"; };
+		92671D74270336590015EC5B /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		92671D7627063B850015EC5B /* FeedTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableVC.swift; sourceTree = "<group>"; };
 		92C752A126E77D5B00D6885A /* MyNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C752A426E77D5B00D6885A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C752A626E77D5B00D6885A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +63,13 @@
 		92C752C626E77D6100D6885A /* MyNewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewsAppUITests.swift; sourceTree = "<group>"; };
 		92C752C826E77D6100D6885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92C752D926E78B2900D6885A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
-		92C752DB26E9208A00D6885A /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
-		92C752DD26E921E900D6885A /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		92C752E126EA113F00D6885A /* VerficationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerficationService.swift; sourceTree = "<group>"; };
+		92C752E426EF861400D6885A /* FeedTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTVCell.swift; sourceTree = "<group>"; };
+		92C752E526EF861400D6885A /* FeedTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTVCell.xib; sourceTree = "<group>"; };
+		92C752EE26F0C9D200D6885A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		92C752F026F0C9EC00D6885A /* GroupAnsPostsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAnsPostsModels.swift; sourceTree = "<group>"; };
+		92C752F526F0EF8E00D6885A /* ApiConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
+		92C752F726F1F74600D6885A /* FeedTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92671D7026FB38EC0015EC5B /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92671D7126FC853D0015EC5B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				92671D7226FC85520015EC5B /* ValidateServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		92C7529826E77D5B00D6885A = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +129,16 @@
 		92C752A326E77D5B00D6885A /* MyNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				92671D7126FC853D0015EC5B /* Services */,
+				92C752F426F0EF7600D6885A /* API */,
+				92C752ED26F0C9C400D6885A /* Models */,
 				92C752DF26E925BC00D6885A /* MainInterface */,
 				92C752D826E7897D00D6885A /* SignInOut */,
 				92C752D726E77DFE00D6885A /* SupportFiles */,
 				92C752D426E77DBE00D6885A /* Delegates */,
 				92C752B226E77D6000D6885A /* Info.plist */,
 				92C752AF26E77D6000D6885A /* LaunchScreen.storyboard */,
+				92671D7627063B850015EC5B /* FeedTableVC.swift */,
 			);
 			path = MyNewsApp;
 			sourceTree = "<group>";
@@ -146,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				92C752AA26E77D5B00D6885A /* SignInOut.storyboard */,
-				92C752DB26E9208A00D6885A /* SignUp.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				92C752D926E78B2900D6885A /* SignInVC.swift */,
-				92C752DD26E921E900D6885A /* SignUpVC.swift */,
+				92671D74270336590015EC5B /* RegistrationVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +208,8 @@
 		92C752DF26E925BC00D6885A /* MainInterface */ = {
 			isa = PBXGroup;
 			children = (
+				92C752E826F0C8DE00D6885A /* FeedFlow */,
+				92C752E326EF85E500D6885A /* FeedCell */,
 			);
 			path = MainInterface;
 			sourceTree = "<group>";
@@ -191,6 +220,40 @@
 				92C752E126EA113F00D6885A /* VerficationService.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		92C752E326EF85E500D6885A /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				92C752E426EF861400D6885A /* FeedTVCell.swift */,
+				92C752E526EF861400D6885A /* FeedTVCell.xib */,
+			);
+			path = FeedCell;
+			sourceTree = "<group>";
+		};
+		92C752E826F0C8DE00D6885A /* FeedFlow */ = {
+			isa = PBXGroup;
+			children = (
+				92C752F726F1F74600D6885A /* FeedTVC.swift */,
+			);
+			path = FeedFlow;
+			sourceTree = "<group>";
+		};
+		92C752ED26F0C9C400D6885A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92C752EE26F0C9D200D6885A /* UserModel.swift */,
+				92C752F026F0C9EC00D6885A /* GroupAnsPostsModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92C752F426F0EF7600D6885A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				92C752F526F0EF8E00D6885A /* ApiConstans.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +272,9 @@
 			dependencies = (
 			);
 			name = MyNewsApp;
+			packageProductDependencies = (
+				92671D6F26FB38EC0015EC5B /* SwiftyJSON */,
+			);
 			productName = MyNewsApp;
 			productReference = 92C752A126E77D5B00D6885A /* MyNewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +346,9 @@
 				Base,
 			);
 			mainGroup = 92C7529826E77D5B00D6885A;
+			packageReferences = (
+				92671D6E26FB38EC0015EC5B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 92C752A226E77D5B00D6885A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,9 +365,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C752E726EF861400D6885A /* FeedTVCell.xib in Resources */,
 				92C752B126E77D6000D6885A /* LaunchScreen.storyboard in Resources */,
 				92C752AE26E77D6000D6885A /* Assets.xcassets in Resources */,
-				92C752DC26E9208A00D6885A /* SignUp.storyboard in Resources */,
 				92C752AC26E77D5B00D6885A /* SignInOut.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,8 +394,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C752E226EA113F00D6885A /* VerficationService.swift in Sources */,
-				92C752DE26E921E900D6885A /* SignUpVC.swift in Sources */,
+				92671D7727063B850015EC5B /* FeedTableVC.swift in Sources */,
+				92671D75270336590015EC5B /* RegistrationVC.swift in Sources */,
+				92C752F126F0C9EC00D6885A /* GroupAnsPostsModels.swift in Sources */,
+				92C752F826F1F74600D6885A /* FeedTVC.swift in Sources */,
+				92C752EF26F0C9D200D6885A /* UserModel.swift in Sources */,
 				92C752A526E77D5B00D6885A /* AppDelegate.swift in Sources */,
+				92C752F626F0EF8E00D6885A /* ApiConstans.swift in Sources */,
+				92C752E626EF861400D6885A /* FeedTVCell.swift in Sources */,
+				92671D7326FC85530015EC5B /* ValidateServices.swift in Sources */,
 				92C752A726E77D5B00D6885A /* SceneDelegate.swift in Sources */,
 				92C752DA26E78B2900D6885A /* SignInVC.swift in Sources */,
 			);
@@ -661,6 +737,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92671D6E26FB38EC0015EC5B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92671D6F26FB38EC0015EC5B /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92671D6E26FB38EC0015EC5B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92C7529926E77D5B00D6885A /* Project object */;
 }

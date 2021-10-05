@@ -11,58 +11,90 @@ class FeedTVC: UITableViewController {
     
     var user = User(email: "", id: 0, name: "", groupsId: [0], password: "")
     
-    private let jsonGroupsUrl = "http://localhost:3000/groups"
-    private var allGroups: [Group] = []
-    private var allPosts: [Posts] = []
-    private var usersGroups: [Group] = []
+    
+
+    var usersGroups: [Group] = []
     private var usersPosts: [Posts] = []
+    private var cell: [CellModel] = []
+    var abc = false
+
+    
     
     
     override func viewDidLoad() {
-        getGroups()
-        getPosts()
-        print (getGroups)
+        ParsinhgServices.getGroups()
+        print("Все группы \(ParsinhgServices.allGroups)")
+        ParsinhgServices.getPosts()
+        print("Все посты \(ParsinhgServices.allPosts)")
+        checkUserGroups()
+        checkUserNews()
+        tableView.reloadData()
         
-      //  chekNews()
-        print(allGroups)
-//        print(user)
         
-    //    print("Группы этого юзера \(simpleGroups)")
+
         
         tableView.register(UINib(nibName: "FeedTVCell", bundle: nil), forCellReuseIdentifier: "FeedTVCell")
         super.viewDidLoad()
+        
+//        print(usersGroups)
+//        print(usersPosts)
+        print(user)
+        
+        tableView.reloadData()
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
 
     @IBAction func chekNews(_ sender: Any) {
         checkUserGroups()
         checkUserNews()
+       
 
         print("Группы этого юзера \(usersGroups)")
         print("Посты этого юзера \(usersPosts)")
         tableView.reloadData()
+        
+        
     }
     // MARK: - Table view data source
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         usersPosts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTVCell", for: indexPath) as! FeedTVCell
+        
+        
+        let group = usersGroups[indexPath.row]
         let posts = usersPosts[indexPath.row]
+        if posts.groupId == group.id {
         cell.newsText.text = posts.text
         cell.likesCount.text = String(posts.likes)
+        
+        cell.fetchImage(imageUrl: posts.image)
+        cell.putGroupImage(image: group.groupImage)
+        cell.groupName.setTitle(group.name, for: .normal)
+        }
 //        cell.newsImage
         
         
 
         return cell
+    }
+    
+    func checkPostAndGroup(post: Posts, group: Group) -> Bool{
+        if post.groupId == group.id{
+          abc = true
+        }
+        return abc
     }
     
 
@@ -111,40 +143,6 @@ class FeedTVC: UITableViewController {
     }
     */
     
-    func getPosts() {
-
-        guard let url = URL(string: ApiConstants.postPath) else { return }
-
-        let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
-            guard let data = data else { return }
-            print(data)
-            do {
-                self.allPosts = try JSONDecoder().decode([Posts].self, from: data)
-                print(self.allPosts)
-            } catch let error {
-                print(error)
-            }
-        }
-        task.resume()
-       }
-    
-    
-    func getGroups() {
-
-        guard let url = URL(string: jsonGroupsUrl) else { return }
-
-        let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
-            guard let data = data else { return }
-            print(data)
-            do {
-                self.allGroups = try JSONDecoder().decode([Group].self, from: data)
-                print(self.allGroups)
-            } catch let error {
-                print(error)
-            }
-        }
-        task.resume()
-       }
     
     func checkUserNews(){
         var groupId = [0]
@@ -152,7 +150,7 @@ class FeedTVC: UITableViewController {
             groupId.append(group.id)
             print (groupId)
         }
-        for post in allPosts {
+        for post in ParsinhgServices.allPosts {
             if groupId.contains(post.groupId){
                 usersPosts.append(post)
                 
@@ -163,11 +161,16 @@ class FeedTVC: UITableViewController {
     
     
     func checkUserGroups(){
-        for group in allGroups {
+        for group in ParsinhgServices.allGroups {
+            
             if (user.groupsId!.contains(group.id)){
                 usersGroups.append(group)
+          
+            
             }
     }
 
+ }
 }
-}
+
+

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Group: Decodable {
     let id: Int
@@ -22,4 +23,14 @@ struct Posts: Decodable{
     var text: String
     var image: String
     var likes: Int
+}
+
+struct FinalPosts {
+    
+    var groupId: Int
+    var id: Int
+    var text: String
+    var image: UIImage
+    var likes: Int
+    
 }

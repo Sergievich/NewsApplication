@@ -185,7 +185,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             <connections>
-                                <action selector="chekNews:" destination="SQS-5L-3cg" eventType="touchUpInside" id="iTK-F4-Clt"/>
+                                <action selector="chekNews:" destination="SQS-5L-3cg" eventType="touchUpInside" id="fWd-4b-JiC"/>
                             </connections>
                         </button>
                     </navigationItem>

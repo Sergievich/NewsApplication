@@ -11,10 +11,14 @@ class FeedTVC: UITableViewController {
     
     var user = User(email: "", id: 0, name: "", groupsId: [0], password: "")
     
+    static var goToGroup = false
+    
+ 
+    
     
 
     var usersGroups: [Group] = []
-    private var usersPosts: [Posts] = []
+  //  private var usersPosts: [Posts] = []
     private var cell: [CellModel] = []
     var abc = false
 
@@ -24,26 +28,26 @@ class FeedTVC: UITableViewController {
     override func viewDidLoad() {
         ParsinhgServices.getGroups()
         print("Все группы \(ParsinhgServices.allGroups)")
-        ParsinhgServices.getPosts()
-        print("Все посты \(ParsinhgServices.allPosts)")
-        checkUserGroups()
-        checkUserNews()
         tableView.reloadData()
-        
-        
-
-        
         tableView.register(UINib(nibName: "FeedTVCell", bundle: nil), forCellReuseIdentifier: "FeedTVCell")
         super.viewDidLoad()
         
-//        print(usersGroups)
-//        print(usersPosts)
+
         print(user)
         
         tableView.reloadData()
 
     }
     
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "goToGroup" else { return }
+        if let destination = segue.destination as? GroupVC {
+        let group = sender as? Group
+        destination.group = group!
+    }
+    }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -51,11 +55,11 @@ class FeedTVC: UITableViewController {
 
     @IBAction func chekNews(_ sender: Any) {
         checkUserGroups()
-        checkUserNews()
+//        checkUserNews()
        
 
         print("Группы этого юзера \(usersGroups)")
-        print("Посты этого юзера \(usersPosts)")
+     //   print("Посты этого юзера \(usersPosts)")
         tableView.reloadData()
         
         
@@ -64,39 +68,33 @@ class FeedTVC: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        usersGroups.count
 
-        usersPosts.count
+    //    usersPosts.count
     }
+    
+     
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTVCell", for: indexPath) as! FeedTVCell
         
         
-        let group = usersGroups[indexPath.row]
-        let posts = usersPosts[indexPath.row]
-        if posts.groupId == group.id {
-        cell.newsText.text = posts.text
-        cell.likesCount.text = String(posts.likes)
+      
+        let posts = usersGroups[indexPath.row]
+       
+        cell.newsText.text = posts.posts.text
+        cell.likesCount.text =  String(posts.posts.likes)
         
-        cell.fetchImage(imageUrl: posts.image)
-        cell.putGroupImage(image: group.groupImage)
-        cell.groupName.setTitle(group.name, for: .normal)
-        }
-//        cell.newsImage
+        cell.fetchImage(imageUrl: posts.posts.image)
+        cell.putGroupImage(image: posts.groupImage)
+        cell.groupName.setTitle(posts.name, for: .normal)
         
-        
-
         return cell
     }
     
-    func checkPostAndGroup(post: Posts, group: Group) -> Bool{
-        if post.groupId == group.id{
-          abc = true
-        }
-        return abc
-    }
-    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -143,22 +141,7 @@ class FeedTVC: UITableViewController {
     }
     */
     
-    
-    func checkUserNews(){
-        var groupId = [0]
-        for group in usersGroups{
-            groupId.append(group.id)
-            print (groupId)
-        }
-        for post in ParsinhgServices.allPosts {
-            if groupId.contains(post.groupId){
-                usersPosts.append(post)
-                
-            }
-        }
-    }
-    
-    
+
     
     func checkUserGroups(){
         for group in ParsinhgServices.allGroups {

@@ -29,6 +29,7 @@
 		92C752F626F0EF8E00D6885A /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752F526F0EF8E00D6885A /* ApiConstans.swift */; };
 		92C752F826F1F74600D6885A /* FeedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C752F726F1F74600D6885A /* FeedTVC.swift */; };
 		92ED278D270C6AA2005CD7D0 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED278C270C6AA2005CD7D0 /* CellModel.swift */; };
+		92ED2790270DD8F4005CD7D0 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED278F270DD8F4005CD7D0 /* GroupVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		92C752F526F0EF8E00D6885A /* ApiConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
 		92C752F726F1F74600D6885A /* FeedTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTVC.swift; sourceTree = "<group>"; };
 		92ED278C270C6AA2005CD7D0 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		92ED278F270DD8F4005CD7D0 /* GroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 		92C752DF26E925BC00D6885A /* MainInterface */ = {
 			isa = PBXGroup;
 			children = (
+				92ED278E270DD8D0005CD7D0 /* GroupStoryboard */,
 				92C752E826F0C8DE00D6885A /* FeedFlow */,
 				92C752E326EF85E500D6885A /* FeedCell */,
 			);
@@ -254,6 +257,14 @@
 				92C752F526F0EF8E00D6885A /* ApiConstans.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		92ED278E270DD8D0005CD7D0 /* GroupStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				92ED278F270DD8F4005CD7D0 /* GroupVC.swift */,
+			);
+			path = GroupStoryboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +418,7 @@
 				92671D7326FC85530015EC5B /* ValidateServices.swift in Sources */,
 				92C752A726E77D5B00D6885A /* SceneDelegate.swift in Sources */,
 				92ED278D270C6AA2005CD7D0 /* CellModel.swift in Sources */,
+				92ED2790270DD8F4005CD7D0 /* GroupVC.swift in Sources */,
 				92C752DA26E78B2900D6885A /* SignInVC.swift in Sources */,
 				92671D79270864090015EC5B /* ParsingServices.swift in Sources */,
 			);

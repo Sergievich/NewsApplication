@@ -12,13 +12,13 @@ struct Group: Decodable {
     let id: Int
     let name: String
     var groupImage: String
-    var posts: [Int]
+    var posts: Posts
     var tag: String
 }
 
 
 struct Posts: Decodable{
-    var groupId: Int
+   // var groupId: Int
     var id: Int
     var text: String
     var image: String

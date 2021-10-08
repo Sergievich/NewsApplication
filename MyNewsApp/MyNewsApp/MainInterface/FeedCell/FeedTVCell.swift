@@ -19,6 +19,7 @@ class FeedTVCell: UITableViewCell {
     @IBOutlet weak var newsImage: UIImageView!
     
     var likeIsActive = false
+  static   var goToGroupPressed = false
     
     private let jsonGroupsUrl = "http://localhost:3000/groups"
     private var groups: [Group] = []
@@ -26,6 +27,9 @@ class FeedTVCell: UITableViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        likeBtnColor.setTitle("", for: .normal)
+        
         
         
         if !likeIsActive{
@@ -38,24 +42,25 @@ class FeedTVCell: UITableViewCell {
      }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        super.setSelected(selected, animated: false)
     }
     
     @IBAction func likeBtnPressed(_ sender: UIButton) {
-        likeIsActive.toggle()
     }
     
+    
+    
     @IBAction func goToGroup(_ sender: UIButton) {
+   
+        }
         
-        
-    }
+    
+    
     
      func fetchImage(imageUrl: String) {
         guard let url = URL(string: imageUrl) else { return }
 
-        let session = URLSession.shared // синглтон
+        let session = URLSession.shared
 
         session.dataTask(with: url) { (data, response, error) in
             if let error = error {
@@ -91,3 +96,4 @@ class FeedTVCell: UITableViewCell {
 
 }
 }
+

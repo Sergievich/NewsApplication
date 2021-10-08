@@ -63,35 +63,65 @@
         "name": "Самая лучшая группа",
         "groupImage": "https://play-lh.googleusercontent.com/XADiLPB1O2QGQqpQfbi93wlUgeZLecOJ1Bj9E_BmOiIAdyHDcec5OeCPAM-YnGcdAd4",
         "tag": "Новости",
-        "posts": []
+        "posts": {
+            "id": 0,
+            "text": "0",
+            "image": "0",
+            "likes": 0
+          }
       },
     {
       "id": 4,
       "name": "tut.by",
       "groupImage": "https://marketing.by/upload/medialibrary/c68/logo-tut-by.png",
       "tag": "Новости",
-      "posts": [1, 2]
-    },
+      "posts": {
+          "id": 2,
+          "text": "Трагедия одна за одной, прошла стрельба в Российском вузе, есть пострадавшие",
+          "image": "https://dic.academic.ru/pictures/wiki/files/109/moskau_uni.jpg",
+          "likes": 1
+        }
+      },
     {
       "id": 1,
       "name": "Motors.BY",
       "groupImage": "https://wroom.ru/i/news/11798img1.jpg",
       "tag": "Машины",
-      "posts": [1, 2]
+      "posts": {
+          "id": 2,
+          "text": "Вышел новый Ford Mustang GT 2021, V8, 5.0, скоро выйдет обзор в этой группе!!!!",
+          "image": "https://carsweek.ru/upload/iblock/000/00071a0bf9a763b03ea50e57d791779f.jpg",
+          "likes": 1
+          
+           }
     },
     {
       "id": 2,
       "name": "Любители странной техники",
       "groupImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/2048px-Xiaomi_logo_%282021-%29.svg.png",
       "tag": "Техника",
-      "posts": [1, 2]
+      "posts":{
+          
+          "id": 1,
+          "text": "На нашем любимом сайте Али экспресс новые смартфоны компании Mi Poco Flex Pro 19 21 mini",
+          "image": "https://5element.by/upload/medialibrary/a6d/a6dbf0809cc08af9bdb51fd51e57153a.jpg",
+          "likes": 1
+        }
     },
     {
       "id": 3,
       "name": "Топ трейдер Костян",
       "groupImage": "https://berg.com.ua/wp-content/Trader-analisi-ciclica.jpg",
       "tag": "Рынки",
-      "posts": [1, 2]
+      "posts":{
+          
+            "groupId": 3,
+            "id": 1,
+            "text": "Нефть падает, срочно продаем!",
+            "image": "https://img.gazeta.ru/files3/333/8102333/shutterstock_248750233-pic4_zoom-1500x1500-10999.jpg",
+            "likes": 1
+          
+      }
       
     }
   ],

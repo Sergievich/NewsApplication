@@ -33,10 +33,10 @@ class ParsinhgServices{
 
         let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
-            print(data)
+            print("Все группы\(data)")
             do {
                 ParsinhgServices.allGroups = try JSONDecoder().decode([Group].self, from: data)
-                print(ParsinhgServices.allGroups)
+                print("Гоыно из жопы\(ParsinhgServices.allGroups)")
             } catch let error {
                 print(error)
             }
@@ -71,7 +71,7 @@ class ParsinhgServices{
 
         let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
-            print(data)
+            print("\(data)")
             do {
                 ParsinhgServices.allUsers = try JSONDecoder().decode([User].self, from: data)
                 print(ParsinhgServices.allUsers)
@@ -82,7 +82,7 @@ class ParsinhgServices{
         task.resume()
        }
     
-    //MARK: GET IMAGE
+  
     
 
 }

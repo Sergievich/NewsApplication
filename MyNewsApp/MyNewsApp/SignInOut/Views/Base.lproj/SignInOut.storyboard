@@ -209,8 +209,25 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhX-Im-fB3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="928"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="828"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuw-jC-Uaw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1R-lB-ZSa">
+                                                        <rect key="frame" x="218" y="88" width="171" height="140"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.3638906411944165" green="0.42242091103835228" blue="0.78414554195804198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="y1R-lB-ZSa" secondAttribute="trailing" constant="25" id="jpm-rD-LKA"/>
+                                                    <constraint firstItem="y1R-lB-ZSa" firstAttribute="top" secondItem="xuw-jC-Uaw" secondAttribute="top" constant="88" id="laC-OO-Z8T"/>
+                                                    <constraint firstAttribute="bottom" secondItem="y1R-lB-ZSa" secondAttribute="bottom" constant="25" id="zGs-pc-ypS"/>
+                                                </constraints>
+                                            </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kc7-Je-shZ">
                                                 <rect key="frame" x="8" y="85" width="171" height="128"/>
                                                 <constraints>
@@ -227,17 +244,26 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-ac-HpL">
                                                 <rect key="frame" x="8" y="258" width="398" height="516"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="S9v-3h-ETU" id="nlp-nN-hDP"/>
+                                                    <outlet property="delegate" destination="S9v-3h-ETU" id="8cj-y2-9Gb"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="5qK-ac-HpL" firstAttribute="top" secondItem="xuw-jC-Uaw" secondAttribute="bottom" constant="5" id="2kC-Yc-3Me"/>
+                                            <constraint firstItem="xuw-jC-Uaw" firstAttribute="leading" secondItem="LhX-Im-fB3" secondAttribute="leading" id="8uz-Gk-GVs"/>
                                             <constraint firstItem="Kc7-Je-shZ" firstAttribute="leading" secondItem="LhX-Im-fB3" secondAttribute="leading" constant="8" id="9g1-JP-3bq"/>
                                             <constraint firstItem="Kc7-Je-shZ" firstAttribute="top" secondItem="DeY-G4-71t" secondAttribute="bottom" constant="8" symbolic="YES" id="FQX-bA-gVM"/>
+                                            <constraint firstItem="y1R-lB-ZSa" firstAttribute="leading" secondItem="Kc7-Je-shZ" secondAttribute="trailing" constant="39" id="FbX-pd-VaY"/>
                                             <constraint firstItem="DeY-G4-71t" firstAttribute="top" secondItem="LhX-Im-fB3" secondAttribute="top" constant="56" id="Kgi-fV-62a"/>
+                                            <constraint firstAttribute="trailing" secondItem="xuw-jC-Uaw" secondAttribute="trailing" id="XN9-Nu-38m"/>
                                             <constraint firstItem="5qK-ac-HpL" firstAttribute="leading" secondItem="LhX-Im-fB3" secondAttribute="leading" constant="8" id="itl-Yk-NzX"/>
                                             <constraint firstItem="DeY-G4-71t" firstAttribute="leading" secondItem="LhX-Im-fB3" secondAttribute="leading" constant="54" id="jeo-po-Je9"/>
                                             <constraint firstAttribute="trailing" secondItem="5qK-ac-HpL" secondAttribute="trailing" constant="8" id="paU-45-kA4"/>
                                             <constraint firstItem="5qK-ac-HpL" firstAttribute="top" secondItem="Kc7-Je-shZ" secondAttribute="bottom" constant="45" id="w4L-fp-I9u"/>
+                                            <constraint firstItem="xuw-jC-Uaw" firstAttribute="top" secondItem="LhX-Im-fB3" secondAttribute="top" id="wK3-W3-MBP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -256,7 +282,7 @@
                         <constraints>
                             <constraint firstItem="5ID-Ge-u5r" firstAttribute="top" secondItem="4Z9-8R-UjN" secondAttribute="top" id="GuE-gu-9i2"/>
                             <constraint firstItem="5ID-Ge-u5r" firstAttribute="leading" secondItem="4Z9-8R-UjN" secondAttribute="leading" id="P6R-WN-K4p"/>
-                            <constraint firstItem="LhX-Im-fB3" firstAttribute="height" secondItem="kHM-ao-zhv" secondAttribute="height" multiplier="0.142857" constant="800" id="XG1-Ik-S0F"/>
+                            <constraint firstItem="LhX-Im-fB3" firstAttribute="height" secondItem="kHM-ao-zhv" secondAttribute="height" multiplier="0.142857" constant="700" id="XG1-Ik-S0F"/>
                             <constraint firstItem="4Z9-8R-UjN" firstAttribute="bottom" secondItem="5qK-ac-HpL" secondAttribute="bottom" id="dNb-r2-TK1"/>
                             <constraint firstItem="LhX-Im-fB3" firstAttribute="width" secondItem="kHM-ao-zhv" secondAttribute="width" multiplier="0.57971" constant="174" id="gn9-6J-EWs"/>
                             <constraint firstItem="4Z9-8R-UjN" firstAttribute="trailing" secondItem="5ID-Ge-u5r" secondAttribute="trailing" id="jd7-aP-c7N"/>
@@ -265,9 +291,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="L3G-hM-mQg"/>
                     <connections>
+                        <outlet property="groupDescription" destination="y1R-lB-ZSa" id="6pY-xF-5yt"/>
                         <outlet property="groupImage" destination="Kc7-Je-shZ" id="FBe-X2-2Bz"/>
                         <outlet property="groupName" destination="DeY-G4-71t" id="DJq-Va-WIJ"/>
                         <outlet property="newsTableView" destination="5qK-ac-HpL" id="FGl-Ck-iwy"/>
+                        <outlet property="tableViewGroup" destination="5qK-ac-HpL" id="T56-go-M6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rs9-vO-BA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

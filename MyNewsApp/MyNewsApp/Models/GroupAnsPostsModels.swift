@@ -11,26 +11,27 @@ import UIKit
 struct Group: Decodable {
     let id: Int
     let name: String
-    var groupImage: String
-    var posts: Posts
-    var tag: String
+    let description: String
+    let groupImage: String
+    let posts: [Posts]
+    let tag: String
 }
 
 
 struct Posts: Decodable{
-   // var groupId: Int
-    var id: Int
-    var text: String
-    var image: String
-    var likes: Int
+    let groupId: Int
+    let id: Int
+    let text: String
+    let image: String
+    let likes: Int
 }
 
 struct FinalPosts {
     
-    var groupId: Int
-    var id: Int
-    var text: String
-    var image: UIImage
-    var likes: Int
+    let groupId: Int
+    let id: Int
+    let text: String
+    let image: UIImage
+    let likes: Int
     
 }

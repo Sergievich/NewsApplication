@@ -7,7 +7,13 @@
 
 import UIKit
 
-class FeedTVC: UITableViewController {
+class FeedTVC: UITableViewController, GoToGroupDelegate {
+    func didPressedBtn(btn: UIButton) {
+        
+        self.performSegue(withIdentifier: "goToGroup", sender: UIButton())
+        
+    }
+    
     
     var user = User(email: "", id: 0, name: "", groupsId: [0], password: "")
     
@@ -39,13 +45,15 @@ class FeedTVC: UITableViewController {
 
     }
     
+ 
+    
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "goToGroup" else { return }
         if let destination = segue.destination as? GroupVC {
         let group = sender as? Group
-        destination.group = group!
+            destination.grouping = group?.id ?? 0
     }
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -68,9 +76,14 @@ class FeedTVC: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        usersGroups.count
-
+        var grouper = 0
+        var rows = 0
+        grouper = usersGroups.count
+        for grpoup in usersGroups{
+            rows = grpoup.posts.count * grouper
+            print (grpoup.posts.count)
+        }
+        return rows
     //    usersPosts.count
     }
     
@@ -82,16 +95,25 @@ class FeedTVC: UITableViewController {
         
         
       
-        let posts = usersGroups[indexPath.row]
-       
-        cell.newsText.text = posts.posts.text
-        cell.likesCount.text =  String(posts.posts.likes)
+        let postsIndex = usersGroups[indexPath.row]
+
+        for post in postsIndex.posts{
+            if post.groupId == postsIndex.id{
+                cell.newsText.text = post.text
+                cell.likesCount.text = String(post.likes)
+                cell.fetchImage(imageUrl: post.image)
+                }
+            }
         
-        cell.fetchImage(imageUrl: posts.posts.image)
-        cell.putGroupImage(image: posts.groupImage)
-        cell.groupName.setTitle(posts.name, for: .normal)
+        cell.putGroupImage(image: postsIndex.groupImage)
+        cell.groupName.setTitle(postsIndex.name, for: .normal)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let group = usersGroups[indexPath.row]
+        performSegue(withIdentifier: "goToGroup", sender: group)
     }
     
 
@@ -146,7 +168,7 @@ class FeedTVC: UITableViewController {
     func checkUserGroups(){
         for group in ParsinhgServices.allGroups {
             
-            if (user.groupsId!.contains(group.id)){
+            if user.groupsId!.contains(group.id){
                 usersGroups.append(group)
           
             

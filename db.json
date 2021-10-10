@@ -1,119 +1,83 @@
 {
-  "posts": [
-    {
-      "groupId": 1,
-      "id": 2,
-      "text": "Вышел новый Ford Mustang GT 2021, V8, 5.0, скоро выйдет обзор в этой группе!!!!",
-      "image": "https://carsweek.ru/upload/iblock/000/00071a0bf9a763b03ea50e57d791779f.jpg",
-      "likes": 1
-    },
-    {
-      "groupId": 1,
-      "id": 2,
-      "text": "Скоро готовится анонс нового BMW, если интересен обзор, то ставит лайки!",
-      "image": "https://автолого.рф/wp-content/uploads/bmw-logo-2020-grey.png",
-      "likes": 1
-    },
-    {
-      "groupId": 2,
-      "id": 1,
-      "text": "На нашем любимом сайте Али экспресс новые смартфоны компании Mi Poco Flex Pro 19 21 mini",
-      "image": "https://5element.by/upload/medialibrary/a6d/a6dbf0809cc08af9bdb51fd51e57153a.jpg",
-      "likes": 1
-    },
-    {
-      "groupId": 2,
-      "id": 2,
-      "text": "Набор приколов",
-      "image": "https://i.ytimg.com/vi/XFDDL0G5H4M/maxresdefault.jpg",
-      "likes": 1
-    },
-    {
-      "groupId": 3,
-      "id": 1,
-      "text": "Нефть падает, срочно продаем!",
-      "image": "https://img.gazeta.ru/files3/333/8102333/shutterstock_248750233-pic4_zoom-1500x1500-10999.jpg",
-      "likes": 1
-    },
-    {
-      "groupId": 4,
-      "id": 1,
-      "text": "Прошли очередные выборы в российскую думу",
-      "image": "https://autogrodno.by/images/2020/06/zak-17-00.jpg",
-      "likes": 1
-    },
-    {
-      "groupId": 4,
-      "id": 2,
-      "text": "Трагедия одна за одной, прошла стрельба в Российском вузе, есть пострадавшие",
-      "image": "https://dic.academic.ru/pictures/wiki/files/109/moskau_uni.jpg",
-      "likes": 1
-    },
-    {
-      "groupId": 3,
-      "id": 2,
-      "text": "Поздравлеям вас с днем трейдера, приятного трейдинга, ожмдается рост $$$",
-      "image": "https://cdn22.img.ria.ru/images/155926/68/1559266810_0:0:3077:1731_1920x0_80_0_0_a18a3c1a9f0b823a1affbbc00e6e77e6.jpg",
-      "likes": 1
-    }
-  ],
   "groups": [
       {
         "id": 0,
         "name": "Самая лучшая группа",
+        "description": "lkmnklnkj",
         "groupImage": "https://play-lh.googleusercontent.com/XADiLPB1O2QGQqpQfbi93wlUgeZLecOJ1Bj9E_BmOiIAdyHDcec5OeCPAM-YnGcdAd4",
         "tag": "Новости",
-        "posts": {
+        "posts": [{
+            "groupId": 0,
             "id": 0,
             "text": "0",
             "image": "0",
             "likes": 0
-          }
+          }]
       },
     {
       "id": 4,
       "name": "tut.by",
+      "description": "Главный новостной портал беларуси",
       "groupImage": "https://marketing.by/upload/medialibrary/c68/logo-tut-by.png",
       "tag": "Новости",
-      "posts": {
+      "posts": [{
+          "groupId": 4,
           "id": 2,
           "text": "Трагедия одна за одной, прошла стрельба в Российском вузе, есть пострадавшие",
           "image": "https://dic.academic.ru/pictures/wiki/files/109/moskau_uni.jpg",
           "likes": 1
-        }
+        }]
       },
     {
       "id": 1,
       "name": "Motors.BY",
+      "description": "Мы еще только развиваемся, но уже говорим о главных новостях в автомобильном мире",
       "groupImage": "https://wroom.ru/i/news/11798img1.jpg",
       "tag": "Машины",
-      "posts": {
+      "posts": [{
+          "groupId": 1,
           "id": 2,
           "text": "Вышел новый Ford Mustang GT 2021, V8, 5.0, скоро выйдет обзор в этой группе!!!!",
           "image": "https://carsweek.ru/upload/iblock/000/00071a0bf9a763b03ea50e57d791779f.jpg",
           "likes": 1
           
-           }
+           },
+      {
+          "groupId": 1,
+          "id": 2,
+          "text": "Скоро готовится анонс нового BMW, если интересен обзор, то ставит лайки!",
+          "image": "https://автолого.рф/wp-content/uploads/bmw-logo-2020-grey.png",
+          "likes": 1
+      }]
     },
     {
       "id": 2,
       "name": "Любители странной техники",
+      "description": "Все что можно найти на экспрессе, от телефонов до безделушек - у нас будет",
       "groupImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/2048px-Xiaomi_logo_%282021-%29.svg.png",
       "tag": "Техника",
-      "posts":{
-          
+      "posts":[{
+          "groupId": 2,
           "id": 1,
           "text": "На нашем любимом сайте Али экспресс новые смартфоны компании Mi Poco Flex Pro 19 21 mini",
           "image": "https://5element.by/upload/medialibrary/a6d/a6dbf0809cc08af9bdb51fd51e57153a.jpg",
           "likes": 1
-        }
+        },
+      {
+          "groupId": 2,
+          "id": 2,
+          "text": "Набор приколов",
+          "image": "https://i.ytimg.com/vi/XFDDL0G5H4M/maxresdefault.jpg",
+          "likes": 1
+      }]
     },
     {
       "id": 3,
       "name": "Топ трейдер Костян",
+      "description": "Если хочешь работать,а главное, зарабатывать, то обращайся за помощью ко мне!!!",
       "groupImage": "https://berg.com.ua/wp-content/Trader-analisi-ciclica.jpg",
       "tag": "Рынки",
-      "posts":{
+      "posts":[{
           
             "groupId": 3,
             "id": 1,
@@ -121,7 +85,7 @@
             "image": "https://img.gazeta.ru/files3/333/8102333/shutterstock_248750233-pic4_zoom-1500x1500-10999.jpg",
             "likes": 1
           
-      }
+      }]
       
     }
   ],
@@ -166,3 +130,5 @@
     }
   ]
 }
+
+, UITableViewDataSource, UITableViewDelegate

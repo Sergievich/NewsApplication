@@ -38,14 +38,21 @@ class GroupVC: UIViewController {
         }
         groupName.text = groups[0].name
         putGroupImage(image: groups[0].groupImage)
+        groupDescription.text = groups[0].description
         
+        groupImage.layer.borderWidth = 1
+        groupImage.layer.masksToBounds = true
+        groupImage.layer.cornerRadius = groupImage.frame.height/2
+        groupImage.clipsToBounds = true
+        
+        print (groups[0].posts)
         
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 1
+        return groups[0].posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

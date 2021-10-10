@@ -16,21 +16,11 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
     
     
     var user = User(email: "", id: 0, name: "", groupsId: [0], password: "")
-    
-    static var goToGroup = false
-    
- 
-    
-    
 
     var usersGroups: [Group] = []
-  //  private var usersPosts: [Posts] = []
-    private var cell: [CellModel] = []
-    var abc = false
+    var postss: [Posts] = []
 
-    
-    
-    
+ 
     override func viewDidLoad() {
         ParsinhgServices.getGroups()
         print("Все группы \(ParsinhgServices.allGroups)")
@@ -80,8 +70,8 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
         var rows = 0
         grouper = usersGroups.count
         for grpoup in usersGroups{
-            rows = grpoup.posts.count * grouper
-            print (grpoup.posts.count)
+            rows += grpoup.posts.count
+            print ("Aaaaaaaaaaaaaaaaaaaa\(grpoup.posts.count)")
         }
         return rows
     //    usersPosts.count
@@ -94,76 +84,40 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTVCell", for: indexPath) as! FeedTVCell
         
         
-      
-        let postsIndex = usersGroups[indexPath.row]
-
-        for post in postsIndex.posts{
-            if post.groupId == postsIndex.id{
-                cell.newsText.text = post.text
-                cell.likesCount.text = String(post.likes)
-                cell.fetchImage(imageUrl: post.image)
-                }
-            }
         
-        cell.putGroupImage(image: postsIndex.groupImage)
-        cell.groupName.setTitle(postsIndex.name, for: .normal)
+        for group in usersGroups{
+            postss += group.posts
+        }
+        let postsIndex = postss[indexPath.row]
+        for group in usersGroups{
+        if postsIndex.groupId == group.id{
+                cell.newsText.text = postsIndex.text
+                cell.likesCount.text = String(postsIndex.likes)
+                cell.fetchImage(imageUrl: postsIndex.image)
+            cell.putGroupImage(image: group.groupImage)
+            cell.groupName.setTitle(group.name, for: .normal)
+        }
+        }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let group = usersGroups[indexPath.row]
-        performSegue(withIdentifier: "goToGroup", sender: group)
+        var abc: [Group] = []
+        var iterations = 0
+        
+        usersGroups.forEach({group in
+            repeat {
+                abc.append(group)
+                iterations = iterations + 1
+            } while iterations < group.posts.count 
+            })
+        
+        
+        let group = abc[indexPath.row]
+            performSegue(withIdentifier: "goToGroup", sender: group)
     }
     
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-
     
     func checkUserGroups(){
         for group in ParsinhgServices.allGroups {
@@ -177,5 +131,12 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
 
  }
 }
+
+////usersGroups.forEach({group in
+//repeat {
+//    abc.append(group)
+//    iterations = iterations + 1
+//} while iterations == group.posts.count
+//})
 
 

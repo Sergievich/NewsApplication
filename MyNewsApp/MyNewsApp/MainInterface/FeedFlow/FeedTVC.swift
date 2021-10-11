@@ -19,6 +19,7 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
 
     var usersGroups: [Group] = []
     var postss: [Posts] = []
+    var bcd: [Int] = []
 
  
     override func viewDidLoad() {
@@ -28,11 +29,18 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
         tableView.register(UINib(nibName: "FeedTVCell", bundle: nil), forCellReuseIdentifier: "FeedTVCell")
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "My groups", style: .plain, target: self, action: #selector(addTaped))
+        
 
         print(user)
         
         tableView.reloadData()
 
+    }
+    
+    @objc func addTaped(){
+        performSegue(withIdentifier: "goToUserGroup", sender: self)
+        
     }
     
  
@@ -42,9 +50,14 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "goToGroup" else { return }
         if let destination = segue.destination as? GroupVC {
-        let group = sender as? Group
-            destination.grouping = group?.id ?? 0
+        let group = sender as? Posts
+            destination.grouping = group!.groupId
     }
+        guard case segue.identifier = "goToUserGroup" else {return}
+        if let destination = segue.destination as? UsersGroupTVC {
+            let groups = sender as? Int
+            destination.abc = groups!
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -66,9 +79,8 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var grouper = 0
+        
         var rows = 0
-        grouper = usersGroups.count
         for grpoup in usersGroups{
             rows += grpoup.posts.count
             print ("Aaaaaaaaaaaaaaaaaaaa\(grpoup.posts.count)")
@@ -77,7 +89,8 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
     //    usersPosts.count
     }
     
-     
+   
+    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,7 +105,7 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
         for group in usersGroups{
         if postsIndex.groupId == group.id{
                 cell.newsText.text = postsIndex.text
-                cell.likesCount.text = String(postsIndex.likes)
+               
                 cell.fetchImage(imageUrl: postsIndex.image)
             cell.putGroupImage(image: group.groupImage)
             cell.groupName.setTitle(group.name, for: .normal)
@@ -103,18 +116,10 @@ class FeedTVC: UITableViewController, GoToGroupDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var abc: [Group] = []
-        var iterations = 0
-        
-        usersGroups.forEach({group in
-            repeat {
-                abc.append(group)
-                iterations = iterations + 1
-            } while iterations < group.posts.count 
-            })
+
         
         
-        let group = abc[indexPath.row]
+        let group = postss[indexPath.row]
             performSegue(withIdentifier: "goToGroup", sender: group)
     }
     

@@ -12,14 +12,13 @@ protocol GoToGroupDelegate{
 }
 
 class FeedTVCell: UITableViewCell {
-    @IBOutlet weak var likesCount: UILabel!
    
     @IBOutlet weak var newsText: UILabel!
     
     @IBOutlet weak var groupName: UIButton!
     @IBOutlet weak var timeOfUploadingPost: UILabel!
     @IBOutlet weak var ImageOfGroup: UIImageView!
-    @IBOutlet weak var likeBtnColor: UIButton!
+ 
     @IBOutlet weak var newsImage: UIImageView!
     
     var delegate: GoToGroupDelegate?
@@ -36,18 +35,6 @@ class FeedTVCell: UITableViewCell {
         ImageOfGroup.layer.masksToBounds = true
         ImageOfGroup.layer.cornerRadius = ImageOfGroup.frame.height/2
         ImageOfGroup.clipsToBounds = true
-        
-        likeBtnColor.setTitle("", for: .normal)
-        
-        
-        
-        if !likeIsActive{
-            likeBtnColor.tintColor = .gray
-        } else {
-            likeBtnColor.tintColor = .blue
-        }
-        
-
      }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

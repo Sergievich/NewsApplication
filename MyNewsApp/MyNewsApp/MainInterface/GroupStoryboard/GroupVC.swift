@@ -66,7 +66,7 @@ class GroupVC: UIViewController {
         
         
             cell.newsText.text = truePost.text
-            cell.likesCount.text = String(truePost.likes)
+           
             cell.fetchImage(imageUrl: truePost.image)
         
       
